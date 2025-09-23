@@ -1,10 +1,13 @@
 from fastapi import FastAPI, Request, Query, HTTPException
 from fastapi.responses import JSONResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from helpers.proxy_checker import process_proxy
 
 from jinja2 import Environment, FileSystemLoader
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 env = Environment(loader=FileSystemLoader("templates"))
 
