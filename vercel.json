@@ -10,14 +10,6 @@
     {
       "src": "/check(.*)",
       "dest": "main.py"
-    },
-    {
-      "src": "/",
-      "dest": "main.py"
-    },
-    {
-      "src": "/sub",
-      "dest": "main.py"
     }
   ]
 }
